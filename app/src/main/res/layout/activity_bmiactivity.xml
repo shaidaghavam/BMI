@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cardview_dark_background"
+    android:id="@+id/parent"
+    tools:context=".bmiactivity">
+
+    <RelativeLayout
+        android:id="@+id/centerHortizalLine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+
+        />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:id="@+id/centerVerticalLine"/>
+
+
+    <RelativeLayout
+        android:layout_width="340dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="50dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:id="@+id/height_layout"
+        android:background="@drawable/cardbackground"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="Height"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:layout_marginTop="20dp"
+            />
+
+        <TextView
+            android:id="@+id/currentSize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="50dp"
+            android:text="170"
+            android:textColor="@color/white"
+            android:textSize="40sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@id/currentSize"
+            android:text="cm"
+            android:textColor="@color/gray"
+            android:textSize="20sp"
+
+            />
+
+        <SeekBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="20dp"
+            android:layout_marginStart="10dp"
+            android:thumbTint="@color/white"
+            android:progressTint="#FF4c4c"
+            android:layout_marginEnd="10dp"
+            android:id="@+id/seekbar"
+            />
+
+    </RelativeLayout>
+
+
+    <android.widget.Button
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:id="@+id/calculatebmi"
+        android:layout_marginTop="680dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="5dp"
+        android:text="Calculate"
+        android:textColor="@color/white"
+        android:background="@drawable/buttonbackground"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        />
+
+
+    <RelativeLayout
+        android:layout_width="154dp"
+        android:layout_height="155dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="35dp"
+        android:background="@drawable/malefemalefo"
+        android:id="@+id/male"
+        >
+
+        <ImageView
+            android:layout_width="170px"
+            android:layout_height="170px"
+            android:layout_below="@+id/textmale"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="20dp"
+            android:layout_alignParentBottom="true"
+            android:src="@drawable/icons8_standing_man_50"
+            android:layout_marginBottom="30dp"
+
+
+
+            />
+
+
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Male"
+            android:id="@+id/textmale"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="154dp"
+        android:layout_height="155dp"
+        android:layout_marginStart="230dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="35dp"
+        android:background="@drawable/malefemalefo"
+        android:id="@+id/female"
+        >
+
+        <ImageView
+            android:layout_width="170px"
+            android:layout_height="170px"
+            android:layout_below="@+id/textfemale"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/icons8_woman_50"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="30dp"
+            />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="Female"
+            android:textSize="20sp"
+            android:id="@+id/textfemale"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:layout_marginTop="20dp"
+            />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="154dp"
+        android:layout_height="155dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="480dp"
+        android:layout_marginBottom="35dp"
+        android:background="@drawable/malefemalefo"
+        android:id="@+id/kjhmale"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="Weight"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:layout_marginTop="20dp"
+            />
+
+        <TextView
+            android:id="@+id/currentweight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="110dp"
+            android:text="44"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+        <RelativeLayout
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/plusminus"
+            android:layout_marginStart="15sp"
+            android:layout_marginBottom="10sp"
+            >
+
+            <ImageView
+                android:id="@+id/imageincrease"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/icons8_add_24" />
+
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/plusminus"
+            android:layout_marginStart="85sp"
+            android:layout_marginBottom="10sp" >
+
+            <ImageView
+                android:id="@+id/imagedisrease"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/icons8_subtract_24" />
+
+
+
+
+
+
+        </RelativeLayout>
+
+
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="154dp"
+        android:layout_height="155dp"
+        android:layout_marginStart="230dp"
+        android:layout_marginTop="480dp"
+        android:layout_marginBottom="35dp"
+        android:background="@drawable/malefemalefo"
+        android:id="@+id/ikkjhmale"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="Age"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:layout_marginTop="20dp"
+            />
+        <TextView
+            android:id="@+id/currentage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="110dp"
+            android:text="22"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+        <RelativeLayout
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/plusminus"
+            android:layout_marginStart="15sp"
+            android:layout_marginBottom="10sp"
+            >
+
+            <ImageView
+                android:id="@+id/imageincreaseage"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/icons8_add_24" />
+
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/plusminus"
+            android:layout_marginStart="85sp"
+            android:layout_marginBottom="10sp" >
+
+            <ImageView
+                android:id="@+id/imagediscreaseage"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/icons8_subtract_24" />
+
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
